@@ -1,0 +1,57 @@
+{
+	"info": {
+		"_postman_id": "65402d55-f6cf-45a2-a2ba-00f9aa298735",
+		"name": "APIS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "37004832",
+		"_collection_link": "https://jazzb-developers.postman.co/workspace/Jazzb-ai~850acecc-171d-4abb-b816-6f37a0f74f51/collection/37004832-65402d55-f6cf-45a2-a2ba-00f9aa298735?action=share&source=collection_link&creator=37004832"
+	},
+	"item": [
+		{
+			"name": "BilliMD",
+			"item": [
+				{
+					"name": "User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "laurhln7t4gkhlnfsp7ywho_hlsfl"
+							}
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "session-token",
+								"value": "rbvkur79jksfu_shjhu",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": \"66ef00a9b990c05b76a5ee43\",\r\n    \"first_name\": \"Miami\",\r\n    \"password\": \"billmd124Pass$\",\r\n    \"updated_datetime\": \"2024-08-07T22:26:12.111Z\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/user",
+						"description": "This endpoint allows updating user information via an HTTP PUT request to [http://localhost:5000/user](http://localhost:5000/user). The request should include a JSON payload in the raw request body with the following parameters:\n\n- user_id (string): The ID of the user to be updated.\n    \n- first_name (string): The updated first name of the user.\n    \n- password (string): The updated password of the user.\n    \n- updated_datetime (string): The date and time of the update.\n    \n\n### Request Body\n\n- user_id (string): The ID of the user to be updated.\n    \n- first_name (string): The updated first name of the user.\n    \n- password (string): The updated password of the user.\n    \n- updated_datetime (string): The date and time of the update.\n    \n\nThe response to the request will be in JSON format with a status code of 200 and a content type of \"application/json\". The response body will include:\n\n- status (string): Indicates the status of the update operation.\n    \n\n### Response Body\n\n- status (string): Indicates the status of the update operation."
+					},
+					"response": []
+				},
+				{
+					"name": "All Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/users",
+						"description": "### GET /users\n\nThis endpoint retrieves a list of users.\n\n#### Request\n\nNo request body is required for this endpoint.\n\n#### Response\n\nThe response will be a JSON array containing user objects with the following properties:\n\n- `_id` (string): The unique identifier for the user.\n    \n- `created_datetime` (string): The date and time when the user was created.\n    \n- `first_name` (string): The first name of the user.\n    \n- `last_name` (string): The last name of the user.\n    \n- `middle_name` (string): The middle name of the user.\n    \n- `password` (string): The password of the user.\n    \n- `phone` (string): The phone number of the user.\n    \n- `session_token` (string): The session token associated with the user.\n    \n- `updated_datetime` (string): The date and time when the user was last updated.\n    \n\nExample response:\n\n``` json\n[\n    {\n        \"_id\": \"\",\n        \"created_datetime\": \"\",\n        \"first_name\": \"\",\n        \"last_name\": \"\",\n        \"middle_name\": \"\",\n        \"password\": \"\",\n        \"phone\": \"\",\n        \"session_token\": \"\",\n        \"updated_datetime\": \"\"\n    }\n]\n\n ```"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
