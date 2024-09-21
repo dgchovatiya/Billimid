@@ -1,4 +1,4 @@
-# User API Project
+# BilliMD Assessment
 
 This project implements a Flask-based REST API for user management with MongoDB as the database backend.
 
@@ -56,7 +56,7 @@ BilliMD/
    python run.py
    ```
 
-   This will initialize the database with sample users if the users collection is empty.
+   *This will initialize the database with sample users if the users collection is empty.*
 
 2. The API will be available at `http://localhost:5000`.
 
