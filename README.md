@@ -1,5 +1,3 @@
-# BilliMD Assessment
-
 This project implements a Flask-based REST API for user management with MongoDB as the database backend.
 
 ## Project Structure
